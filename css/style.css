@@ -1,1 +1,35 @@
 @import"reset.css";
+.btn-block {
+	background-color:grey;
+	display: flex;
+}
+.button {
+	margin: 15px;
+	height: 35px;
+	width: 90px;	
+	border: solid black 2px;
+}
+
+.blue{
+	background-color: blue;
+}
+
+.orange {
+	background-color: orange;
+}
+
+.green {
+	background-color: rgb(76, 226, 6);
+}
+
+.pink {
+	background-color: pink;
+}
+
+.yellow{
+	background-color: yellow;
+}
+
+.red{
+	background-color:red;
+}
