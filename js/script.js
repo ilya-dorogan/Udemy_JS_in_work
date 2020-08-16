@@ -162,3 +162,32 @@ let end = new Date();
 
 alert(`Cycle end time ${end - start} ms`);
 */
+
+/* LESSON 45 Функции-конструкторы */
+
+/*
+function User(name, id) {
+	this.name = name;
+	this.id = id;
+	this.human = true;
+	this.hello = function () {
+		console.log(`Hello ${this.name}`);
+	}
+}
+
+User.prototype.exit = function (name) {
+	console.log(`User ${this.name} is gone.`);
+}
+
+const john = new User('John', 1);
+const max = new User('Max', 2);
+
+john.hello();
+max.hello();
+
+john.exit();
+
+console.log(john);
+console.log(max);
+
+*/
