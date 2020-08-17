@@ -289,3 +289,44 @@ const double = a => a * 2; // если действие в одну строку
 
 console.log(double(7)); // 14
 */
+
+/* LESSON 47 Классы (ES6) */
+
+// концепция
+/*
+class Rectangle {
+	constructor(height, width) {
+		this.height = height;
+		this.width = width;
+	}
+
+	calcArea() {
+		return this.height * this.width;
+	}
+}
+
+class ColoredRectangleWithText extends Rectangle {
+	constructor(height, width, text, bgColor) {
+		super(height, width);
+		this.text = text;
+		this.bgColor = bgColor;
+	}
+	showMyProps() {
+		console.log(`Text: ${this.text}, background color: ${this.bgColor}`);
+	}
+}
+
+const div = new ColoredRectangleWithText(30, 20, 'Hello World!', 'green');
+
+div.showMyProps();
+console.log(div.calcArea());
+*/
+
+// экземпляры
+/*
+const square = new Rectangle(7, 4);
+const aw = new Rectangle(5, 5);
+
+console.log(square.calcArea());
+console.log(aw.calcArea());
+*/
