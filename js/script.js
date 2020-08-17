@@ -189,5 +189,103 @@ john.exit();
 
 console.log(john);
 console.log(max);
+*/
 
+/* LESSON 46 Контекст вызова. This */
+
+// 1)
+/*
+function showThis(a, b) {
+	console.log(this); // undefined
+
+	function sum() {
+		console.log(this); // undefined
+		return a + b;
+	}
+	console.log(sum());
+}
+
+showThis(3, 2);
+*/
+
+// 2)
+/*
+const obj = {
+	a: 5,
+	b: 9,
+	sum: function () {
+		function shuot() {
+			console.log(this);
+		}
+		shuot();
+	}
+};
+
+obj.sum();
+*/
+
+// 3)
+/*
+function User(name, id) {
+	this.name = name;
+	this.id = id;
+	this.human = true;
+}
+
+let max = new User('Max', 2);
+*/
+
+// 4)
+/*
+function sayName(surname) {
+	console.log(this);
+	console.log(this.name + surname);
+}
+
+const user = {
+	name: 'Haisenberg'
+};
+
+sayName.call(user, ' BB');
+sayName.apply(user, [' BB']);
+
+function count(num) {
+	return this * num;
+}
+
+const double = count.bind(2);
+
+console.log(double(3));
+console.log(double(8));
+*/
+
+// 1) Обычная фунцкия: this = window, но если "use strict", то undefined.
+// 2) Контекст у методов объекта - сам объект.
+// 3) this в конструкторах и классах это новый экземпляр объекта.
+// 4) Ручная привязка this: call, apply, bind.
+
+/*
+const btn = document.querySelector('button');
+
+btn.addEventListener('click', function () {
+	//console.log(this);
+	this.style.backgroundColor = "red";
+});
+
+const obj = {
+	num: 2,
+	sayNum: function () {
+		const say = () => {
+			console.log(this.num);
+		};
+
+		say();
+	}
+};
+
+obj.sayNum();
+
+const double = a => a * 2; // если действие в одну строку то можно убрать {} и return
+
+console.log(double(7)); // 14
 */
