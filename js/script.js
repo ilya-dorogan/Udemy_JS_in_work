@@ -330,3 +330,19 @@ const aw = new Rectangle(5, 5);
 console.log(square.calcArea());
 console.log(aw.calcArea());
 */
+
+/* LESSON 49 Rest оператор и параметры по умолчанию (ES6) */
+
+/*
+const log = function (a, b, ...rest) {
+	console.log(a, b, rest);
+}
+
+log('100', '100', 'arr', 'arr', 'arr');
+
+function calcOrDouble(number, basis = 2) { //basis по умолчанию
+	console.log(number * basis);
+}
+
+calcOrDouble(6);
+*/
